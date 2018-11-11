@@ -154,6 +154,7 @@ button:hover {
 
     50% {
         transform: scaleY(1.2) translateX(75px);
+        border-radius: 0px;
 
     }
     
@@ -172,5 +173,68 @@ button:hover {
     animation-iteration-count: infinite;
 }
 
+.sun {
+    margin-top: 100px;
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    border-radius: 2000px;
+    animation: sunAnim 10s infinite;
+    animation-timing-function: linear;
+    animation-delay: 0;
+}
 
+.sky {
+    background-color: cornflowerblue;
+    padding-top: 100px;
+    animation: skyAnim 10s;
+    margin-bottom: 0px;
+}
+
+
+@keyframes skyAnim {
+    0% {
+        background-color: gray;
+    }
+    10% {
+        background-color: pink;
+    }
+    30% {
+        background-color: cornflowerblue;
+    }
+    80% {
+        background-color: cornflowerblue;
+    }
+    100% {
+        background-color: gray;
+    }
+}
+
+@keyframes sunAnim {
+    0% {
+        background-color: orange
+        transform: translate(0px, 100px);
+    }
+    25% {
+        background-color: #f3d216;
+        transform: translate(120px, -130px);
+    }
+    50% {
+        transform: translate(240px, -170px);
+    }
+    75% {
+        background-color: #f3d216;
+        transform: translate(360px, -130px);
+    }
+    100% {
+        background-color: red;
+        transform: translate(480px, 0px);
+    }
+}
+
+.grass {
+    background-color: green;
+    padding: 50px;
+    transform: translateY(-100px);
+};
 
