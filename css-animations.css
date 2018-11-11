@@ -1,11 +1,74 @@
+body {
+    background: #317fd8;
+    font-family: sans-serif;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-weight: 100;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 40px;
+    display: block;
+    position: relative;
+    background-color: #fcad26;
+    font-weight: 300px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 25px 80px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 6px #efa424;
+    transition: 100ms;
+}
+
 /* Hover -- On mouse hover */
 
 p:hover {
-    background: purple;
+    /* background: purple; */
+}
+
+p.square {
+    width: 50px;
+    height: 50px;
+    background: green;
+}
+
+p.move-down{
+    transform: translateY(2px);
+    background: blue;
+}
+
+p.move-right {
+    background-color: red;
+    transition-duration: 0.5s;
+    transition-delay: 0s, 1s, 2s;
+    transition-property: border-radius, transform, background-color;
+    border-radius: 1px;
+    /* transform-origin: 0 0; */
+}
+
+p.move-right:hover {
+    transform: rotate(90deg);
+    transform-origin: 50%;
+    border-radius: 10px;
+    background-color: blue;
 }
 
 button:hover {
-    color: white;
+    box-shadow: 0 4px #efa424;
+    top: 2px;
+    /* color: white; */
+}
+
+input:hover {
+    border-color: green;
 }
 
 /* Using FOCUS can help overwrite tab activity or select */
@@ -17,8 +80,6 @@ input:focus {
 }
 
 button:focus {
-    border-radius: 10px;
-    background-color: #2ecc71;
 }
 
 
@@ -28,6 +89,25 @@ Example on button only shows when click is held.
 */
 
 button:active {
-    background-color: orange;
-    font-size: 30px;
+    top: 6px;
+    box-shadow: none;
 }
+
+p:active {
+    color:yellow;
+}
+
+h1:active {
+    color: yellow;
+}
+
+
+/* 
+TRANSFORM
+transform skew()...;
+It passed in a function
+
+TRANSITION
+
+
+*/
