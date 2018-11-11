@@ -1,4 +1,33 @@
+/* Hover -- On mouse hover */
+
 p:hover {
     background: purple;
 }
 
+button:hover {
+    color: white;
+}
+
+/* Using FOCUS can help overwrite tab activity or select */
+
+input:focus {
+    border-color: red;
+    background: #f8f8f8;
+    outline: none;
+}
+
+button:focus {
+    border-radius: 10px;
+    background-color: #2ecc71;
+}
+
+
+/* ACTIVE class, different than active -- not very clean on docs
+
+Example on button only shows when click is held.
+*/
+
+button:active {
+    background-color: orange;
+    font-size: 30px;
+}
