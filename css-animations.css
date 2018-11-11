@@ -1,113 +1,100 @@
-body {
-    background: #317fd8;
-    font-family: sans-serif;
-    text-align: center;
-    color: white;
-}
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
 
 h1 {
-    font-weight: 100;
+  text-align: center;
+  font-family: Raleway;
+  color: #34495e;
 }
-
-button {
-    outline: none;
-    border: none;
-    cursor: pointer;
-    font-size: 40px;
-    display: block;
-    position: relative;
-    background-color: #fcad26;
-    font-weight: 300px;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding: 25px 80px;
-    margin: 0 auto;
-    border-radius: 20px;
-    box-shadow: 0 6px #efa424;
-    transition: 100ms;
-}
-
-/* Hover -- On mouse hover */
-
-p:hover {
-    /* background: purple; */
-}
-
-p.square {
-    width: 50px;
-    height: 50px;
-    background: green;
-}
-
-p.move-down{
-    transform: translateY(2px);
-    background: blue;
-}
-
-p.move-right {
-    background-color: red;
-    transition-duration: 0.5s;
-    transition-delay: 0s, 1s, 2s;
-    transition-property: border-radius, transform, background-color;
-    border-radius: 1px;
-    /* transform-origin: 0 0; */
-}
-
-p.move-right:hover {
-    transform: rotate(90deg);
-    transform-origin: 50%;
-    border-radius: 10px;
-    background-color: blue;
-}
-
-button:hover {
-    box-shadow: 0 4px #efa424;
-    top: 2px;
-    /* color: white; */
-}
-
-input:hover {
-    border-color: green;
-}
-
-/* Using FOCUS can help overwrite tab activity or select */
-
-input:focus {
-    border-color: red;
-    background: #f8f8f8;
-    outline: none;
-}
-
-button:focus {
+.container {
+  display: flex;
+  justify-content: center;
 }
 
 
-/* ACTIVE class, different than active -- not very clean on docs
-
-Example on button only shows when click is held.
-*/
-
-button:active {
-    top: 6px;
-    box-shadow: none;
+div.item {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 220px;
+  max-width: 310px;
+  width: 100%;
+  background: #000000;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
 
-p:active {
-    color:yellow;
+div.item * {
+  box-sizing: border-box;
 }
 
-h1:active {
-    color: yellow;
+div.item img {
+  max-width: 100%;
+  vertical-align: top;
+  height: 210px;
 }
 
+div.item i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  font-size: 34px;
+  color: #000000;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background: #ffffff;
+}
 
-/* 
-TRANSFORM
-transform skew()...;
-It passed in a function
+div.item a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
 
-TRANSITION
+div.item.blue {
+  background-color: #34495e;
+}
+div.item.blue i {
+  color: #34495e;
+}
+div.item.red {
+  background-color: #e74c3c;
+}
+div.item.red i {
+  color: #e74c3c;
+}
 
+div.item.green {
+  background-color: #16a085;
+}
+div.item.green i {
+  color: #16a085;
+}
 
-*/
+div.item * {
+    transition: all 100ms ease-in-out
+}
+
+div.item:hover img {
+    opacity: 0.3;
+    filter: grayscale(100%);
+}
+
+div.item i {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+    transition: 100ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+div.item:hover i {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 100;
+    transition: 100ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
